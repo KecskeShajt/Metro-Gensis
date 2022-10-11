@@ -12,11 +12,14 @@ focus_tree = {
 
     default = no
 
-    continuous_focus_position = {x = 50 y = 1000}
+    continuous_focus_position = {x = 50 y = 0}
 
     focus = {
         id = PAG_cult
         icon = GWC_a_culture_of_blood
+        #position
+        x = 20
+        y = 0 
 
         cost = 5
         
@@ -26,6 +29,26 @@ focus_tree = {
 
         ai_will_do = {
             factor = 5
+        }
+    }
+
+    focus = {
+        id = PAG_breaking_the_ties
+        icon = GWC_a_culture_of_blood
+
+        #requiremnts[spelling is bad...]
+        prerequisite = {
+            focus = PAG_cult
+        }
+
+        #position
+        relative_position_id = PAG_cult
+        x = 0
+        y = 2
+
+        cost = 8
+        completion_reward = {
+            add_stability = 0.05
         }
     }
 }
