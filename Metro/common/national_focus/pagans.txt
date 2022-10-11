@@ -1,0 +1,31 @@
+#!gfx:interface\metro_goals.gfx
+
+focus_tree = {
+    id = PAG_base
+    country = {
+        factor = 0
+        modifier = {
+            add = 10
+            tag = PAG
+        }
+    }
+
+    default = no
+
+    continuous_focus_position = {x = 50 y = 1000}
+
+    focus = {
+        id = PAG_cult
+        icon = GWC_a_culture_of_blood
+
+        cost = 5
+        
+        completion_reward = {
+            add_political_power = 150
+        }
+
+        ai_will_do = {
+            factor = 5
+        }
+    }
+}
