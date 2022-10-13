@@ -1,19 +1,15 @@
 ideas = {
     country = {
 
-
         PAG_social_unrest = {
-            picture = great_depression
-            
-            allowed = {
-            }
-            on_add = {
-                can_send_volounteers = no
-            }
-            on_remove = {
-                set_rule = {
+            picture = RED_soldiers_siphoning_manpower
 
-                }
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.02
+                stability_weekly_factor = -0.002
+                recruitable_population = 0.06
             }
         }
     }

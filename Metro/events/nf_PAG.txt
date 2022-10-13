@@ -1,6 +1,6 @@
 add_namespace = nf_PAG
 
-country_event = {
+country_event = { #Social unrest
     id = nf_PAG.1
     title = nf_PAG.1.t
     desc = nf_PAG.1.d
@@ -8,8 +8,46 @@ country_event = {
 
     is_triggered_only = yes
 
-    option = { #Social unrest
-        name = nf_RED.1.a
-        add_ideas = PAG_social_unrest
+    immediate = { 
+        hidden_effect = {
+            add_ideas = PAG_social_unrest
+        }
+    }
+
+    option = {
+        name = mf_PAG.1.a
+        add_popularity = {
+            ideology = despot
+            popularity = 0.02
+        }
+        hidden_effect = {
+            set_country_flag = PAG_mild_unrest
+        }
     }
 }
+
+#country_event = {
+#    id = nf_PAG.2
+#    title = nf_PAG.2.t
+#    desc = nf_PAG.2.d
+#    picture = "GFX_event (12)"
+#
+#    is_triggered_only = yes
+#
+#    immediate = {
+#        hidden_effect = {
+#            add_ideas = PAG_preach
+#        }
+#    }
+#
+#    option = {
+#        name = mf_PAG.2.a
+#        add_popularity = {
+#            ideology = community
+#            popularity = 0.02
+#        }
+#        hidden_effect = {
+#            set_country_flag = PAG_early_reform
+#        }
+#    }
+#}

@@ -61,4 +61,12 @@ leader_traits = {
 			factor = 25
 		}
 	}
+
+	PAG_preacher = {
+		random = no
+		max_planning_factor = 0.025
+		ai_will_do = {
+			factor = 25
+		}
+	}
 }

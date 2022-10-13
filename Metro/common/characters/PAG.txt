@@ -14,3 +14,19 @@ characters={
 			desc= "PAG_yuriy_DESC"
 		}
 	}
+	#PAG_Gora = {
+	#	name = PAG_Gora
+	#	portraits = {
+	#		army = {
+	#			large = ""
+	#		}
+	#	}
+	#	country = {
+	#		traits = { _preacher }
+	#		expire = "3000.1.1"
+	#		id = 1
+	#		ideology = community
+	#		desc = "PAG_Gora_DESC"
+	#	}
+	#}
+}

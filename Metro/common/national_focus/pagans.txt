@@ -65,6 +65,7 @@ focus_tree = {
 
         cost = 6
         completion_reward = {
+            country_event = nf_PAG.1 # Social Unrest event
             add_manpower = -50
             add_war_support = 0.3
         }
@@ -83,6 +84,7 @@ focus_tree = {
 
         cost = 6
         completion_reward ={
+            # country_event = nf_PAG.2 -- WIP
             add_manpower = +20
             add_war_support = -0.25
         }
