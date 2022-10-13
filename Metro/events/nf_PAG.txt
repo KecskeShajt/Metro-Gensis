@@ -15,9 +15,9 @@ country_event = { #Social unrest
     }
 
     option = {
-        name = mf_PAG.1.a
+        name = nf_PAG.1.a
         add_popularity = {
-            ideology = despot
+            ideology = dictatorial
             popularity = 0.02
         }
         hidden_effect = {

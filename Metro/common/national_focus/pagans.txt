@@ -55,8 +55,13 @@ focus_tree = {
     focus = {
         id = PAG_question_Infidels
         icon = GFX_RED_workers_culture
+
         prerequisite = {
             focus = PAG_breaking_the_ties
+        }
+
+        mutually_exclusive = {
+            focus = PAG_merciful_god
         }
 
         relative_position_id = PAG_breaking_the_ties
