@@ -4,8 +4,8 @@ oob = "PAG_2028"
 
 set_research_slots = 2
 
-set_stability = 0.55
-set_war_support = 0.75
+set_stability = 0.20
+set_war_support = 0.15
 
 set_country_flag = is_savage_nation
 

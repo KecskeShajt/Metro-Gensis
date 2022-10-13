@@ -16,7 +16,7 @@ focus_tree = {
 
     focus = {
         id = PAG_cult
-        icon = GWC_a_culture_of_blood
+        icon = GFX_GWC_a_culture_of_blood
         #position
         x = 20
         y = 0 
@@ -34,7 +34,7 @@ focus_tree = {
 
     focus = {
         id = PAG_breaking_the_ties
-        icon = GWC_a_culture_of_blood
+        icon = GFX_GWC_a_culture_of_blood
 
         #requiremnts[spelling is bad...]
         prerequisite = {
@@ -48,7 +48,43 @@ focus_tree = {
 
         cost = 8
         completion_reward = {
-            add_stability = 0.05
+            add_stability = 0.10
+        }
+    }
+
+    focus = {
+        id = PAG_question_Infidels
+        icon = GFX_RED_workers_culture
+        prerequisite = {
+            focus = PAG_breaking_the_ties
+        }
+
+        relative_position_id = PAG_breaking_the_ties
+        x = 2
+        y = 2
+
+        cost = 6
+        completion_reward = {
+            add_manpower = -50
+            add_war_support = 0.3
+        }
+    }
+
+    focus = {
+        id = PAG_merciful_god
+        icon = GFX_cog_idea
+        prerequisite = {
+            focus = PAG_breaking_the_ties
+        }
+
+        relative_position_id = PAG_breaking_the_ties
+        x = -2
+        y = 2
+
+        cost = 6
+        completion_reward ={
+            add_manpower = +20
+            add_war_support = -0.25
         }
     }
 }

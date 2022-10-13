@@ -1,0 +1,20 @@
+ideas = {
+    country = {
+
+
+        PAG_social_unrest = {
+            picture = great_depression
+            
+            allowed = {
+            }
+            on_add = {
+                can_send_volounteers = no
+            }
+            on_remove = {
+                set_rule = {
+
+                }
+            }
+        }
+    }
+}

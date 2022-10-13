@@ -1,0 +1,15 @@
+add_namespace = nf_PAG
+
+country_event = {
+    id = nf_PAG.1
+    title = nf_PAG.1.t
+    desc = nf_PAG.1.d
+    picture = "GFX_event (12)"
+
+    is_triggered_only = yes
+
+    option = { #Social unrest
+        name = nf_RED.1.a
+        add_ideas = PAG_social_unrest
+    }
+}
