@@ -12,5 +12,16 @@ ideas = {
                 recruitable_population = 0.06
             }
         }
+
+        #PAG_social_fear = {
+        #    picture = PAG_wolf_skull
+#
+        #    removal_cost = -1
+#
+        #    modifier = {
+        #        stability_monthly = 0.02
+        #        war_support_factor = 0.1
+        #    }
+        #}
     }
 }

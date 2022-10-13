@@ -77,6 +77,9 @@ focus_tree = {
         prerequisite = {
             focus = PAG_breaking_the_ties
         }
+        mutually_exclusive = {
+            focus = PAG_question_Infidels
+        }
 
         relative_position_id = PAG_breaking_the_ties
         x = -2
