@@ -13,13 +13,23 @@ ideas = {
             }
         }
 
+#        PAG_social_cult = { This should be a later game idea...
+#            picture = PAG_prophet_in_robes
+#
+#            removal_cost = -1
+#
+#            modifier = {
+#                monthly_manpower = 20
+#            }
+#        }
+
         #PAG_social_fear = {
         #    picture = PAG_wolf_skull
 #
         #    removal_cost = -1
 #
         #    modifier = {
-        #        stability_monthly = 0.02
+        #        stability_monthly = -0.02
         #        war_support_factor = 0.1
         #    }
         #}
