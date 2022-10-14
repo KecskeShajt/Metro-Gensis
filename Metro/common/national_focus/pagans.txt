@@ -51,7 +51,7 @@ focus_tree = {
             add_stability = 0.10
         }
     }
-
+## VELES PATH
     focus = {
         id = PAG_question_Infidels
         icon = GFX_RED_workers_culture
@@ -76,6 +76,32 @@ focus_tree = {
         }
     }
 
+    focus = {
+        id = PAG_building_a_cult
+        icon = GFX_PAG_altair
+
+        prerequisite = {
+            focus = PAG_question_Infidels
+        }
+
+        relative_position_id = PAG_question_Infidels
+        x = 0
+        y = 2
+
+        cost = 6 
+
+        completion_reward = {
+            #early decisions to build an sacrificial altair
+            add_stability = -0.1
+            add_command_power = 20
+            add_timed_idea = {
+                idea = PAG_sacrificial_altairs
+                days = 180
+            }
+            }
+        }
+    }
+## PERUN PATH
     focus = {
         id = PAG_merciful_god
         icon = GFX_cog_idea

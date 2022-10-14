@@ -13,6 +13,18 @@ ideas = {
             }
         }
 
+        PAG_sacrificial_altairs = {
+            picture = PAG_stone_altair
+
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = -0.05
+                production_speed_buildings_factor = 0.3
+                monthly_population = -0.1
+            }
+        }
+
 #        PAG_social_cult = { This should be a later game idea...
 #            picture = PAG_prophet_in_robes
 #
