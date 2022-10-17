@@ -38,3 +38,9 @@ set_popularities = {
 	dictatorial = 40
 }
 
+# Starting ideas:
+
+add_ideas = {
+	PAG_lost_ways
+	PAG_common_heresy
+}

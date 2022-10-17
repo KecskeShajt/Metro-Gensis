@@ -98,16 +98,37 @@ focus_tree = {
                 idea = PAG_sacrificial_altairs
                 days = 180
             }
-            }
         }
     }
-## PERUN PATH
+
+    focus = {
+        id = PAG_proclamation_of_cult
+        icon = GFX_Pag_snake
+
+        prerequisite = {
+            focus = PAG_building_a_cult
+        }
+
+        relative_position_id = PAG_building_a_cult
+        x = 0 
+        y = 2
+
+        cost = 6
+
+        completion_reward = {
+            add_manpower = 20
+        }
+    }
+
+
+    ## PERUN PATH
     focus = {
         id = PAG_merciful_god
         icon = GFX_cog_idea
         prerequisite = {
             focus = PAG_breaking_the_ties
         }
+
         mutually_exclusive = {
             focus = PAG_question_Infidels
         }
@@ -118,8 +139,8 @@ focus_tree = {
 
         cost = 6
         completion_reward ={
-            # country_event = nf_PAG.2 -- WIP
-            add_manpower = +20
+            # country_event = nf_PAG.2 #WIP
+            add_manpower = 20
             add_war_support = -0.25
         }
     }

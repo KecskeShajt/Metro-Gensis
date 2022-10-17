@@ -25,6 +25,28 @@ ideas = {
             }
         }
 
+        PAG_lost_ways = {
+            picture = PAG_tunel_with_two_ends
+
+            removal_cost = -1
+
+            modifier = {
+                recruitable_population = -0.2
+                political_power_factor = -0.3
+            }
+        }
+
+        PAG_common_heresy = {
+            picture = PAG_some_religious_symbols
+
+            removal cost = -1
+
+            modifier = {
+                production_factory_efficiency_gain_factor = -0.3
+                production_factory_max_efficiency_factor = -0.4
+            }
+        }
+
 #        PAG_social_cult = { This should be a later game idea...
 #            picture = PAG_prophet_in_robes
 #
