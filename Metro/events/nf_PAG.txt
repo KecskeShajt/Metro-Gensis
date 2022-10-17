@@ -26,6 +26,37 @@ country_event = { #Social unrest
     }
 }
 
+country_event = { #Accept Veles or die
+    id = nf_PAG.3
+    title = nf_PAG.3.t
+    desc = nf_PAG.3.d
+    picture = "GFX_event (10)"
+
+    is_triggered_only = yes
+
+    immediate = {
+        political_power_factor = 0.1
+    }
+
+    option = {
+        name = nf_PAG.3.a
+        add_popularity = {
+            ideology = dictatorial
+            popularity = 0.01
+        }
+        monthly_population = -0.2
+        add_political_power = -30
+    }
+
+    option = {
+        name = nf_PAG.3.b
+        add_stability = -0.2
+        add_war_support = 0.15
+        add_political_power = -30
+    }
+
+}
+
 #country_event = {
 #    id = nf_PAG.2
 #    title = nf_PAG.2.t

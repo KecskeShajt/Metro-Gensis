@@ -102,6 +102,25 @@ focus_tree = {
     }
 
     focus = {
+        id = PAG_unifying_fate
+        icon = GFX_PAG_two_tracks_joining
+
+        prerequisite = {
+            focus = PAG_question_Infidels
+        }
+
+        relative_position_id = PAG_question_Infidels
+        x = 2
+        y = 2
+
+        cost = 6
+
+        completion_reward = {
+            country_event = nf_PAG.3 #Accept Veles or die
+        }
+    }
+
+    focus = {
         id = PAG_proclamation_of_cult
         icon = GFX_Pag_snake
 
