@@ -102,7 +102,7 @@ focus_tree = {
     }
 
     focus = {
-        id = PAG_unifying_fate
+        id = PAG_unifying_faith
         icon = GFX_PAG_two_tracks_joining
 
         prerequisite = {
