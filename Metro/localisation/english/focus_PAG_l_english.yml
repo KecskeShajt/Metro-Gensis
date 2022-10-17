@@ -10,5 +10,15 @@ PAG_breaking_the_ties_desc:0 "Only by renouncing the false gods we will be able 
 PAG_question_Infidels:0 "Fear Veles"
 PAG_question_Infidels_desc:0 "We now depend on the Veles will. We must keep him happy. We must give him offerings!"
 
+PAG_building_a_cult:0 "Building a cult"
+PAG_building_a_cult_desc:0 "We must strengthen our faith! We must show our devotion and satisfy Veles, and he demands blood!"
+
+PAG_unifying_fate:0 "Unifying fate"
+PAG_unifying_fate_desc:0 "Time to face the non-believers, time for them to decide if they stay with us or against us!"
+
+PAG_proclamation_of_cult:0 "Proclamation of cult"
+PAG_proclamation_of_cult_desc:0 "Oh Veles! We are nothing but your servants! Please accept us into your kingdom and let us eat from your garden."
+
+#Perun Path
 PAG_merciful_god:0 "Praise Perun!"
 PAG_merciful_god_desc:0 "Perun is a merciful god! We must improve! We must show others the light!"
