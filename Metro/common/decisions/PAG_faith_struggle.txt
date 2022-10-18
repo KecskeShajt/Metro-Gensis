@@ -1,0 +1,39 @@
+PAG_faith_struggle = {
+    PAG_preach = {
+        icon = GFX_PAG_monk
+        picture = GFX_PAG_sun_moon_big
+        priority = 100
+
+        allowed = {
+            always = yes
+        }
+
+        visible = {
+            has_country_flag = PAG_mild_unrest
+        }
+
+        cost = 50
+        fire_only_once = yes
+
+        modifier = {
+            stability_weekly = -0.05
+            political_power_gain = -0.15;
+        }
+
+        complete_effect = {
+            ReligiousTensions = 20
+        }
+
+        ai_will_do = {
+            base = 5
+            modifier = {
+                add = 5
+                has_stability < 0.5
+            } 
+        }
+    }
+
+    PAG_teach = {
+        icon = GFX_PAG_
+    }
+}

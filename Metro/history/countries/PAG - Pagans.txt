@@ -6,6 +6,9 @@ set_research_slots = 2
 
 set_stability = 0.20
 set_war_support = 0.15
+set_variable = {
+	PAG.ReligiousTensions = 0;
+}
 
 set_country_flag = is_savage_nation
 
