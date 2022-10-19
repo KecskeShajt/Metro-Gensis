@@ -139,6 +139,46 @@ focus_tree = {
         }
     }
 
+    ## ECONOMY
+
+    focus = { #Cleaning the tracks or something
+        id = PAG_work_assignment
+        icon = GFX_PAG_TODO
+
+        x = 30
+        y = 0
+
+        completion_reward = {
+            production_factory_max_efficiency_factor = 0.15
+            random_owned_controlled_state = {
+                add_extra_state_shared_building_slots = 1
+            }
+        }
+    }
+
+    focus = { # Cult of Svarog - labour
+        id = PAG_svarog_cult
+        icon = GFX_PAG_machines
+
+        prerequisite = {
+            focus = PAG_work_assignment
+        }
+
+        relative_position_id = PAG_work_assignment
+            x = 0
+            y = 2
+
+        completion_reward = {
+            random_owned_controlled_state = {
+                add_resource = {
+                    type = scrap
+                    amount = 2
+                }
+            }
+
+        }
+    }
+
 
     ## PERUN PATH
     focus = {
