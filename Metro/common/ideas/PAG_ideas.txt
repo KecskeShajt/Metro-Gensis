@@ -47,6 +47,16 @@ ideas = {
             }
         }
 
+        PAG_work_assignments = {
+            picture = PAG_svarog_pic
+
+            removal_cost = -1
+
+            modifier = {
+                production_factory_max_efficiency_factor = 0.2
+            }
+        }
+
 #        PAG_social_cult = { This should be a later game idea...
 #            picture = PAG_prophet_in_robes
 #

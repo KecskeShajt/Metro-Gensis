@@ -1,0 +1,22 @@
+PAG_faith_struggle = {
+    icon = generic_prepare_civil_war
+
+    priority ={
+        base = 100
+    }
+
+    visible = {
+        original_tag = PAG
+        AND = {
+            has_country_flag = PAG_mild_unrest
+        }
+    }
+
+    available = {
+        has_country_flag = PAG_mild_unrest
+    }
+
+    allowed = {
+        original_tag = PAG
+    }
+}

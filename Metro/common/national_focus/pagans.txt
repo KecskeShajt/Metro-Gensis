@@ -145,12 +145,14 @@ focus_tree = {
         id = PAG_work_assignment
         icon = GFX_PAG_TODO
 
-        x = 30
+        x = 40
         y = 0
 
+        cost = 5
+
         completion_reward = {
-            production_factory_max_efficiency_factor = 0.15
-            random_owned_controlled_state = {
+            add_ideas = PAG_work_assignments
+            289 = {
                 add_extra_state_shared_building_slots = 1
             }
         }
@@ -164,19 +166,54 @@ focus_tree = {
             focus = PAG_work_assignment
         }
 
+        mutually_exclusive = {
+            focus = PAG_cult_of_Gaia
+        }
+
         relative_position_id = PAG_work_assignment
-            x = 0
+            x = -2
             y = 2
 
+        cost = 5
+
         completion_reward = {
-            random_owned_controlled_state = {
+            289 = {
                 add_resource = {
                     type = scrap
                     amount = 2
                 }
             }
-
         }
+    }
+
+    focus = { # Cult of Gaia - nourishment
+
+        id = PAG_cult_of_Gaia
+        icon = GFX_PAG_sapling
+
+        prerequisite = {
+            focus = PAG_work_assignment
+        }
+
+        mutually_exclusive = {
+            focus = PAG_svarog_cult
+        }
+
+        relative_position_id = PAG_work_assignment
+            x = 2
+            y = 2
+        
+        cost = 5
+
+        completion_reward = {
+            289 = {
+                add_resource = {
+                    type = chemicals 
+                    amount = 2
+                }
+            }
+        }
+
     }
 
 
