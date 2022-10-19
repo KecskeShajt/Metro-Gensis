@@ -3,7 +3,7 @@ characters={
 		name = PAG_yuriy
 		portraits = {
 			army = {
-				large = "gfx/leaders/PAG/yuriy.dds"
+				large = "gfx/leaders/PAG/Yuriy.dds"
 			}
 		}
 		country_leader = {
@@ -18,11 +18,11 @@ characters={
 	#	name = PAG_Gora
 	#	portraits = {
 	#		army = {
-	#			large = ""
+	#			large = "gfx/leaders/PAG/Gora.dds"
 	#		}
 	#	}
 	#	country = {
-	#		traits = { _preacher }
+	#		traits = { PAG_preacher }
 	#		expire = "3000.1.1"
 	#		id = 1
 	#		ideology = community

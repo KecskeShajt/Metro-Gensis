@@ -8,7 +8,14 @@ leader_traits = {
 			factor = 10
 		}
 	}
-
+## PAG 
+	PAG_preacher = {
+		random = no
+		ai_focus_offense_factor = 0.4
+		war_stability_factor = 0.3
+		justify_war_goal_time = -0.3
+	}
+## PAG End
 	EUR_french_crow = {
 		random = no
 		max_planning_factor = 0.15
