@@ -1,5 +1,6 @@
 PAG_faith_struggle = {
-    PAG_preach = {
+
+    preach = {
         icon = GFX_PAG_monk
         picture = GFX_PAG_sun_moon_big
         priority = 100
@@ -33,7 +34,7 @@ PAG_faith_struggle = {
         }
     }
 
-    PAG_teach = {
+    teach = {
         icon = GFX_PAG_
     }
 }
