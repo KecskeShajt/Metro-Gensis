@@ -101,6 +101,54 @@ focus_tree = {
         }
     }
 
+    focus = { #no sacrifice altair
+        id = PAG_together
+        icon = GFX_PAG_dove_on_altair
+
+        prerequisite = {
+            focus = PAG_building_a_cult
+        }
+
+        mutually_exclusive = {
+            focus = PAG_blood_offering
+        }
+
+        cost = 6
+        relative_position_id = PAG_building_a_cult
+        x = -2
+        y = 2
+
+        completion_reward = {
+            country_event = nf_PAG.4 #building altairs as society
+            add_popularity = {
+                ideology = dictatorial
+                popularity = 0.15
+            }
+        }
+    }
+
+    focus = { #build altair with slaves
+        id = PAG_blood_offering
+        icon = GFX_PAG_skull
+
+        prerequisite = {
+            focus = PAG_building_a_cult
+        }
+        
+        mutually_exclusive = {
+            focus = PAG_together
+        }
+
+        cost = 6
+        relative_position_id = PAG_building_a_cult
+        x = 2
+        y = 2
+
+        completion_reward = {
+            country_event = nf_PAG.5
+        } 
+    }
+
     focus = {
         id = PAG_unifying_faith
         icon = GFX_PAG_two_tracks_joining
@@ -110,7 +158,7 @@ focus_tree = {
         }
 
         relative_position_id = PAG_question_Infidels
-        x = 2
+        x = 6
         y = 2
 
         cost = 6
@@ -125,12 +173,22 @@ focus_tree = {
         icon = GFX_Pag_snake
 
         prerequisite = {
-            focus = PAG_building_a_cult
+                focus = PAG_blood_offering
         }
 
+        prerequisite = {
+            focus = PAG_together
+        }
+        
+        available = {
+            has_completed_focus = PAG_together
+            OR = {
+                has_completed_focus = Pag
+            }
+        }
         relative_position_id = PAG_building_a_cult
         x = 0 
-        y = 2
+        y = 4
 
         cost = 6
 

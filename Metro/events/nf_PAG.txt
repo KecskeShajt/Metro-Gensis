@@ -54,7 +54,42 @@ country_event = { #Accept Veles or die
         add_war_support = 0.15
         add_political_power = -30
     }
+}
 
+country_event = { #together building altairs
+    id = nf_PAG.4
+    title = nf_PAG.4.t
+    desc = nf_PAG.4.d
+    picture = "GFX_event (9)"
+
+    is_triggered_only = yes
+
+    option = {
+        name = nf_PAG.3.a
+        add_stability = 0.05
+        substract_from_variable = {
+            var = ReligiousTensions
+            value = 10
+        }       
+    }
+}
+
+country_event = { #slaves to build altairs
+    id = nf_PAG.5
+    title = nf_PAG.5.t
+    desc = mf_PAG.5.d
+    picture = "GFX_event (2)"
+
+    is_triggered_only = yes
+
+    option = {
+        name = nf_PAG.5.a
+        add_stability = -0.15
+        add_to_variable = {
+            var = ReligiousTensions
+            value = 10
+        }
+    }
 }
 
 #country_event = {
