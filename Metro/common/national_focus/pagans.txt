@@ -12,7 +12,7 @@ focus_tree = {
 
     default = no
 
-    continuous_focus_position = {x = 50 y = 0}
+    #continuous_focus_position = {x = 50 y = 0}
 
     focus = {
         id = PAG_cult
@@ -173,19 +173,17 @@ focus_tree = {
         icon = GFX_Pag_snake
 
         prerequisite = {
-                focus = PAG_blood_offering
-        }
-
-        prerequisite = {
+            focus = PAG_blood_offering
             focus = PAG_together
         }
-        
+
         available = {
             has_completed_focus = PAG_together
             OR = {
-                has_completed_focus = Pag
+                has_completed_focus = PAG_blood_offering
             }
         }
+
         relative_position_id = PAG_building_a_cult
         x = 0 
         y = 4
@@ -271,8 +269,89 @@ focus_tree = {
                 }
             }
         }
-
     }
+
+    focus = { #
+        id = PAG_cherish_the_ground
+        icon = GFX_hands_with_plant
+
+        prerequisite = {
+            focus = PAG_cult_of_Gaia
+        }
+
+        relative_position_id = PAG_cult_of_Gaia
+            x = 0
+            y = 2
+        
+        cost = 5.5
+
+        completion_reward = {
+            289 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+            }
+        }
+    }
+
+    focus = {
+        id = PAG_plowing_the_grounds
+        icon = GFX_PAG_farms
+
+        prerequisite = {
+            focus = PAG_cherish_the_ground
+        }
+
+        relative_position_id = PAG_cherish_the_ground
+            x = 0
+            y = 2
+
+        cost = 5
+        
+        completion_reward = {
+            289 = {
+                add_extra_state_shared_building_slots = 2
+            }
+            add_tech_bonus = {
+                category = farming
+                bonus = 0.75
+                uses = 2
+                name = "sypać gufno na ziemie!"
+            }
+            # farmland ideas??
+        }
+    }
+
+    focus = {
+        id = PAG_gaia_shrines
+        icon = GFX_PAG_shrine
+
+        prerequisite = {
+            focus = PAG_plowing_the_grounds
+        }
+
+        relative_position_id = PAG_plowing_the_grounds
+            x = 0
+            y = 2
+        
+        cost = 5
+
+        completion_reward = {
+            289 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+
+            #possible modification of idea from farmland
+        }
+    }
+
+    
 
 
     ## PERUN PATH
