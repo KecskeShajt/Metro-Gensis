@@ -57,6 +57,16 @@ ideas = {
             }
         }
 
+        PAG_the_cult_of_blood = {
+            picture = PAG_blood_droplet
+
+            removal_cost = -1
+
+            modifier = {
+                monthly_population = -0.02
+            }
+        }
+
 #        PAG_social_cult = { This should be a later game idea...
 #            picture = PAG_prophet_in_robes
 #

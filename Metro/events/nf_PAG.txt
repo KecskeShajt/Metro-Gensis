@@ -89,6 +89,38 @@ country_event = { #slaves to build altairs
             var = ReligiousTensions
             value = 10
         }
+        hidden_effect ={
+            set_country_flag = PAG_blood_cult
+        }
+    }
+}
+
+country_event = {
+    id = nf_PAG.6
+    title nf_PAG.6.t
+    desc = nf_PAG.6.d
+    picture = "GFX_event (4)"
+
+    is_triggered_only = yes
+
+    immediate = {
+        if ={
+            has_country_flag = PAG_blood_cult
+        }
+        add_ideas = PAG_the_cult_of_blood
+        ai_baddas_factor = 0.5
+        else = {
+            ai_baddas_factor = 0.2
+        }
+    }
+
+    option = {
+        name = nf_PAG.6.a
+        add_popularity = {
+            ideology = dictatorial
+            popularity = 0.1
+        }
+        
     }
 }
 
