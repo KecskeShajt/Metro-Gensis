@@ -2147,6 +2147,7 @@ focus_tree = {
 			every_owned_state = {
                 limit = {
                     is_core_of = GWC
+					is_owned_by = EUR
                 }
                 compliance > 80
             }
@@ -3659,9 +3660,10 @@ focus_tree = {
 
 		available = {
 			NOT = { has_war_with = GWC }
-			every_owned_state  = {
+			every_owned_state = {
                 limit = {
                     is_core_of = GWC
+					is_owned_by = EUR
                 }
                 compliance > 80
             }
@@ -3672,7 +3674,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_owned_state  = {
+			every_owned_state = {
                 limit = {
                     is_core_of = GWC
                     is_owned_by = EUR
@@ -4371,6 +4373,7 @@ focus_tree = {
 			every_owned_state  = {
                 limit = {
                     is_core_of = GWC
+					is_owned_by = EUR
                 }
                 compliance > 80
             }
