@@ -482,7 +482,10 @@ EUR_council_gui_decision_category = {
 			has_idea = EUR_mil_power_1
 		}
 	
-		cost = 25
+		custom_cost_text = command_power_20
+		custom_cost_trigger = {
+			command_power > 19.9
+		}
 
 		days_remove = 10
 		
@@ -492,6 +495,12 @@ EUR_council_gui_decision_category = {
 		complete_effect = { 
 			custom_effect_tooltip = europe_mil_is_good_again_tt
 			remove_ideas = EUR_mil_power_1
+			add_manpower = 10
+			add_equipment_to_stockpile = {
+				type = scrap_infantry_equipment_1
+				amount = 10
+				producer = RUS
+			}
 		}
 
 		timeout_effect = {
@@ -749,5 +758,6 @@ EUR_council_gui_decision_category = {
 	}
 	
 }
+
 
 
