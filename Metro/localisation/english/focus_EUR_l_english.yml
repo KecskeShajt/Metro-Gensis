@@ -518,7 +518,7 @@
  EUR_reforms_in_the_military_desc:0 ""
 
  EUR_invite_RED_advisors:0 "Invite Red Line Advisors"
- EUR_invite_RED_advisors:0 ""
+ EUR_invite_RED_advisors_desc:0 ""
 
  EUR_improve_red_army:0 "Improve PLA"
  EUR_improve_red_army_desc:0 ""
@@ -546,3 +546,5 @@
 
  EUR_the_true_threat:0 "The True Threat"
  EUR_the_true_threat_desc:0 ""
+
+ RED_volunteers_tt:0 "Creates §G1§! §YTemplate§! and §G2§! §Ydivisions§!"
