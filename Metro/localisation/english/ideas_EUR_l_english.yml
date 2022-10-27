@@ -121,9 +121,20 @@
  rome_slavery_1:0 "Slavery"
  rome_slavery_2:0 "Slavery"
 
- europe_red_army:0 "Red Army"
+ europe_red_army:0 "People's Liberation Army"
 
- europe_red_army_2:0 "Red Army"
+ europe_red_army_2:0 "People's Liberation Army"
 
  remain_centralised:0 "Remain Decentralised"
 
+ brit_economy_1:0 "The European Bullet Economy"
+ brit_economy_2:0 "The European Bullet Economy"
+ brit_economy_3:0 "The European Bullet Economy"
+ brit_economy_4:0 "The European Bullet Economy"
+ brit_economy_5:0 "The European Bullet Economy"
+
+ commie_mutiny:0 "Mutinies"
+ sabotaged_industry_community:0 "Sabotaged Industry"
+
+ EUR_mikhail:0 "Mikhail Ivanov"
+ _red_europe_mil_advisor:0 "Red Line Military Advisor"

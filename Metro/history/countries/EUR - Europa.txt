@@ -40,6 +40,9 @@ set_popularities = {
 	dictatorial = 11.05
 }
 
+recruit_character = EUR_marshal
+recruit_character = EUR_central_committee
+recruit_character = EUR_mikhail
 recruit_character = EUR_elective_council
 recruit_character = EUR_luca_bianachi
 recruit_character = EUR_head_chancellor_schulz
