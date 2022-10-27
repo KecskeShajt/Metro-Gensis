@@ -1141,7 +1141,7 @@ focus_tree = {
 	focus = {
 		id = EUR_start_of_political_reform
 		icon = GFX_EUR_focus_1
-		x = 32
+		x = 36
 		y = 0
 		cost = 4
 
@@ -5142,4 +5142,1734 @@ focus_tree = {
 #		}
 #	}
 
+	focus = {
+		id = EUR_italian_influence
+		icon = GFX_EUR_the_coup
+		prerequisite = { focus = EUR_start_of_political_reform }
+		mutually_exclusive = { focus = EUR_british_influence focus = EUR_remain_centralised }
+
+		relative_position_id = EUR_start_of_political_reform
+		x = -8
+		y = 2
+		cost = 6.45
+
+		available = {
+
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_popularity = { ideology = dictatorial popularity = 0.05}
+			add_ideas = europe_rising_rome_sentiment
+		}
+	}
+
+	focus = {
+		id = EUR_expose_council_members
+		icon = GFX_conference
+		prerequisite = { focus = EUR_italian_influence }
+
+		relative_position_id = EUR_italian_influence
+		x = 1
+		y = 1
+		cost = 2.587
+
+		available = {
+			dictatorial > .15
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = nf_EUR.21
+		}
+	}
+
+	focus = {
+		id = EUR_military_display
+		icon = GFX_HNZ_skull_spike
+		prerequisite = { focus = EUR_italian_influence }
+
+		relative_position_id = EUR_italian_influence
+		x = -3
+		y = 1
+		cost = 6.45
+
+		available = {
+			has_manpower > 35
+			dictatorial > .15
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = nf_EUR.22
+			add_manpower = -35
+		}
+	}
+
+	focus = {
+		id = EUR_riots_against_the_council
+		icon = GFX_courtroom
+		prerequisite = { focus = EUR_italian_influence }
+
+		relative_position_id = EUR_italian_influence
+		x = -1
+		y = 1
+		cost = 2.587
+
+		available = {
+			has_manpower > 25
+			dictatorial > .15
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = nf_EUR.23
+			add_manpower = -25
+		}
+	}
+
+	focus = {
+		id = EUR_the_centurions_might
+		icon = GFX_sandbag_reinforcement
+		prerequisite = { focus = EUR_hostile_displays }
+
+		relative_position_id = EUR_hostile_displays
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+			dictatorial > .2
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			hidden_effect = { load_oob = "EUR_roman_militia" }
+			custom_effect_tooltip = roman_militia_tt
+		}
+	}
+
+	focus = {
+		id = EUR_sabotage_industry
+		icon = GFX_focus_SOV_organize_wreckers
+		prerequisite = { focus = EUR_italian_influence }
+
+		relative_position_id = EUR_italian_influence
+		x = 3
+		y = 1
+		cost = 6.45
+
+		available = {
+			dictatorial > .25
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = sabotaged_industry_despot
+		}
+	}
+
+	focus = {
+		id = EUR_rise_of_the_workers
+		icon = GFX_soldier_1
+		prerequisite = { focus = EUR_sabotage_industry }
+
+		relative_position_id = EUR_sabotage_industry
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+			dictatorial > .30
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+			  remove_idea = sabotaged_industry_despot
+			  add_idea = sabotaged_industry_despot2
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_inspire_nationalism
+		icon = GFX_focus_generic_italy_first
+		prerequisite = { focus = EUR_expose_council_members }
+		prerequisite = { focus = EUR_riots_against_the_council }
+
+		relative_position_id = EUR_expose_council_members
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+			dictatorial > .2
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+			  remove_idea = british_majority
+			  add_idea = british_majority_1
+			}
+			swap_ideas = {
+			  remove_idea = italian_majority
+			  add_idea = italian_majority_1
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_united_independance
+		icon = GFX_HNZ_logistics_2
+		prerequisite = { focus = EUR_inspire_nationalism }
+
+		relative_position_id = EUR_inspire_nationalism
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+			dictatorial > .3
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+			  remove_idea = british_majority_1
+			  add_idea = british_majority_2
+			}
+			swap_ideas = {
+			  remove_idea = italian_majority_1
+			  add_idea = italian_majority_3
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_hostile_displays
+		icon = GFX_HNZ_knight_to_remember
+		prerequisite = { focus = EUR_military_display }
+
+		relative_position_id = EUR_military_display
+		x = 1
+		y = 1
+		cost = 2.587
+
+		available = {
+			dictatorial > .35
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = hostile_displays_tt
+		}
+	}
+
+	focus = {
+		id = EUR_lessons_from_history
+		icon = GFX_HNZ_generic_treaty
+		prerequisite = { focus = EUR_military_display }
+
+		relative_position_id = EUR_military_display
+		x = -1
+		y = 1
+		cost = 2.587
+
+		available = {
+			dictatorial > .35
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = rallied_men_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = doctrine_balanced
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_mimic_roman_institutions
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = EUR_lessons_from_history }
+
+		relative_position_id = EUR_lessons_from_history
+		x = 0
+		y = 1
+		cost = 2.587
+
+		available = {
+			dictatorial > .35
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_popularity = { ideology = council popularity = 0.025 }
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_glorify_rome
+		icon = GFX_EUR_rome_glorify
+		prerequisite = { focus = EUR_mimic_roman_institutions }
+
+		relative_position_id = EUR_mimic_roman_institutions
+		x = 0
+		y = 1
+		cost = 2
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = { ideology = dictatorial popularity = 0.05 }
+		}
+	}
+
+	focus = {
+		id = EUR_bianachis_coup
+		icon = GFX_EUR_roman_general
+		prerequisite = { focus = EUR_the_centurions_might }
+		prerequisite = { focus = EUR_united_independance }
+
+		mutually_exclusive = { focus = EUR_a_military_state }
+
+		relative_position_id = EUR_the_centurions_might
+		x = 0
+		y = 1
+		cost = 2.587
+
+		available = {
+			dictatorial > .55
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = nf_EUR.25
+			set_country_flag = europe_worm_is_threat
+		}
+	}
+
+	focus = {
+		id = EUR_a_military_state
+		icon = GFX_EUR_a_military_state
+		prerequisite = { focus = EUR_united_independance }
+		prerequisite = { focus = EUR_rise_of_the_workers }
+
+		mutually_exclusive = { focus = EUR_bianachis_coup }
+
+		relative_position_id = EUR_united_independance
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+			dictatorial > .5
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = nf_EUR.24
+		}
+	}
+
+	focus = {
+		id = EUR_ad_glorium
+		icon = GFX_focus_ITA_mare_nostrum
+		prerequisite = { focus = EUR_bianachis_coup }
+		prerequisite = { focus = EUR_glorify_rome }
+
+		mutually_exclusive = { focus = EUR_for_europa }
+
+		relative_position_id = EUR_bianachis_coup
+		x = -1
+		y = 1
+		cost = 2.587
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = ad_glorium_idea
+			add_ideas = nova_roma
+		}
+	}
+
+	focus = {
+		id = EUR_for_europa
+		icon = GFX_EUR_for_europa
+		prerequisite = { focus = EUR_a_military_state focus = EUR_bianachis_coup }
+
+		mutually_exclusive = { focus = EUR_ad_glorium }
+
+		relative_position_id = EUR_a_military_state
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = for_europa_idea
+			add_ideas = blood_and_bullets
+			add_ideas = nova_roma
+		}
+	}
+
+	focus = {
+		id = EUR_the_great_worm_cult_realised
+		icon = GFX_GWC_skull
+		prerequisite = { focus = EUR_for_europa}
+
+		relative_position_id = EUR_for_europa
+		x = 0.5
+		y = 1
+		cost = 6.45
+
+		available = {
+			has_army_manpower = {
+				size > 50
+			}
+			has_war_support > 0.3
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = -0.05
+			set_country_flag = europe_worm_is_threat
+		}
+	}
+
+	focus = {
+		id = EUR_dispose_ideas_of_rome
+		icon = GFX_EUR_dipose_roman
+		prerequisite = { focus = EUR_for_europa}
+
+		relative_position_id = EUR_for_europa
+		x = 2.5
+		y = 1
+		cost = 6.45
+
+		available = {
+			has_army_manpower = {
+				size > 50
+			}
+			has_war_support > 0.3
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = nf_EUR.26
+		}
+	}
+
+	focus = {
+		id = EUR_united_army
+		icon = GFX_EUR_armed_forces
+		prerequisite = { focus = EUR_for_europa}
+
+		relative_position_id = EUR_for_europa
+		x = -2
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = united_army_europe
+		}
+	}
+
+	focus = {
+		id = EUR_nationalist_militias
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		prerequisite = { focus = EUR_united_army focus = EUR_a_pax_romana }
+
+		mutually_exclusive = { focus = EUR_united_militias focus = EUR_legions }
+
+		relative_position_id = EUR_united_army
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = united_army_europe
+				add_idea = united_army_europe_fascist
+			}
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = EUR_united_militias
+		icon = GFX_EUR_armed_forces_2
+		prerequisite = { focus = EUR_united_army }
+
+		mutually_exclusive = { focus = EUR_nationalist_militias }
+
+		relative_position_id = EUR_united_army
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = united_army_europe
+				add_idea = united_army_europe_democrat
+			}
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = EUR_equip_our_forces
+		icon = GFX_medium_arms_2
+		prerequisite = { focus = EUR_nationalist_militias focus = EUR_united_militias }
+
+		relative_position_id = EUR_united_army
+		x = 0
+		y = 2
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = scrap_infantry_equipment_1
+				amount = 75
+				producer = RUS
+			}
+			add_manpower = 50
+		}
+	}
+
+	focus = {
+		id = EUR_jumpstart_the_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = EUR_for_europa focus = EUR_ad_glorium }
+
+		relative_position_id = EUR_for_europa
+		x = -4
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 2
+				    instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_a_pax_romana
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		prerequisite = { focus = EUR_ad_glorium }
+
+		relative_position_id = EUR_ad_glorium
+		x = -2
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = pax_romana
+		}
+	}
+
+	focus = {
+		id = EUR_rome_slaves_in_workforce
+		icon = GFX_RED_allow_volunteers 
+		prerequisite = { focus = EUR_a_pax_romana }
+
+		relative_position_id = EUR_a_pax_romana
+		x = -3
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = rome_slavery_1
+			custom_effect_tooltip = rome_slaves_in_workforce_tt
+		}
+	}
+
+	focus = {
+		id = EUR_legions
+		icon = GFX_EUR_roman_army
+		prerequisite = { focus = EUR_a_pax_romana }
+
+		mutually_exclusive = { focus = EUR_nationalist_militias }
+
+		relative_position_id = EUR_a_pax_romana
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = united_army_europe_rome
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = EUR_i_came
+		icon = GFX_EUR_veni
+		prerequisite = { focus = EUR_a_pax_romana }
+
+		relative_position_id = EUR_legions
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = arms_factory
+				    level = 2
+				    instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_i_saw
+		icon = GFX_EUR_vidi
+		prerequisite = { focus = EUR_legions focus = EUR_nationalist_militias }
+
+		relative_position_id = EUR_legions
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = scrap_infantry_equipment_1
+				amount = 100
+				producer = RUS
+			}
+			add_manpower = 25
+		}
+	}
+
+	focus = {
+		id = EUR_i_conquered
+		icon = GFX_EUR_vici
+		prerequisite = { focus = EUR_i_came }
+		prerequisite = { focus = EUR_i_saw }
+
+		relative_position_id = EUR_i_saw
+		x = 0
+		y = 1
+		cost = 3
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GWC
+			}
+			add_timed_idea = {  idea = EUR_kill_GWC  days = 120 }
+		}
+	}
+
+	focus = {
+		id = EUR_take_what_is_ours
+		icon = GFX_HNZ_logistics_2
+		prerequisite = { focus = EUR_i_conquered }
+
+		relative_position_id = EUR_i_conquered
+		x = -2
+		y = 1
+		cost = 6.45
+
+		available = {
+			NOT = { has_war_with = GWC }
+			every_owned_state  = {
+                limit = {
+                    is_core_of = GWC
+                }
+                compliance > 80
+            }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			every_owned_state  = {
+                limit = {
+                    is_core_of = GWC
+                    is_owned_by = EUR
+                }
+                add_core_of = PREV
+            }
+		}
+	}
+
+	focus = {
+		id = EUR_crossing_the_rubicon
+		icon = GFX_HNZ_arbat_puppet
+		prerequisite = { focus = EUR_i_conquered }
+
+		relative_position_id = EUR_i_conquered
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+			date > 2031.1.1
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = ARB
+				ARB = { country_exists = no }
+			}
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARB
+			}
+			421 = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_dagger_to_the_heart
+		icon = GFX_EUR_rome_dagger_to_the_heart
+		prerequisite = { focus = EUR_crossing_the_rubicon }
+
+		relative_position_id = EUR_crossing_the_rubicon
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+			OR = {
+				date > 2032.1.1
+				ARB = { country_exists = no }
+			}
+		}
+
+		bypass = {
+			has_war_with = HNZ
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HNZ
+			}
+			add_timed_idea = { idea = buff_against_hanza  days = 120 }
+		}
+	}
+
+	focus = {
+		id = EUR_militarise_the_society
+		icon = GFX_HNZ_knight_to_remember
+		prerequisite = { focus = EUR_a_pax_romana }
+
+		relative_position_id = EUR_a_pax_romana
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = pax_romana
+				add_idea = pax_romana_1
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_improve_living_conditions
+		icon = GFX_campfire
+		prerequisite = { focus = EUR_militarise_the_society }
+
+		relative_position_id = EUR_militarise_the_society
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			swap_ideas = {
+				remove_idea = pax_romana_1
+				add_idea = pax_romana_2
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_industrialise_rome
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = EUR_improve_living_conditions }
+
+		relative_position_id = EUR_improve_living_conditions
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 3
+				    instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = pax_romana_2
+				add_idea = pax_romana_3
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_militarise_roman_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = EUR_improve_living_conditions }
+
+		relative_position_id = EUR_improve_living_conditions
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				    type = arms_factory
+				    level = 3
+				    instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_the_might_of_rome
+		icon = GFX_EUR_schulz_plan
+		prerequisite = { focus = EUR_industrialise_rome }
+		prerequisite = { focus = EUR_militarise_roman_industry }
+
+		relative_position_id = EUR_industrialise_rome
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				    type = arms_factory
+				    level = 2
+				    instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_all_roads_lead_to_rome
+		icon = GFX_RCH_infrastructure
+		prerequisite = { focus = EUR_the_might_of_rome }
+
+		relative_position_id = EUR_the_might_of_rome
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			every_owned_state  = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_rome_ready_RED
+		icon = GFX_EUR_rome_core_RED
+		prerequisite = { focus = EUR_crossing_the_rubicon }
+
+		relative_position_id = EUR_crossing_the_rubicon
+		x = 2
+		y = 1
+		cost = 6.45
+
+		available = {
+			date > 2031.1.1
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = conventional_infantry_equipment_1
+				amount = 125
+				producer = RUS
+			}
+			add_manpower = 125
+		}
+	}
+
+	focus = {
+		id = EUR_rome_war_RED
+		icon = GFX_EUR_rome_war_RED
+		prerequisite = { focus = EUR_rome_ready_RED }
+
+		relative_position_id = EUR_crossing_the_rubicon
+		x = 2
+		y = 2
+		cost = 6.45
+
+		available = {
+		}
+
+		bypass = {
+			has_war_with = RED
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = RED
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_rome_ready_RCH
+		icon = GFX_EUR_rome_core_RCH
+		prerequisite = { focus = EUR_crossing_the_rubicon }
+
+		relative_position_id = EUR_crossing_the_rubicon
+		x = -2
+		y = 1
+		cost = 6.45
+
+		available = {
+			date > 2031.1.1
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = conventional_infantry_equipment_1
+				amount = 125
+				producer = RUS
+			}
+			add_manpower = 125
+		}
+	}
+
+	focus = {
+		id = EUR_rome_war_RCH
+		icon = GFX_EUR_rome_war_RCH
+		prerequisite = { focus = EUR_rome_ready_RCH }
+
+		relative_position_id = EUR_crossing_the_rubicon
+		x = -2
+		y = 2
+		cost = 6.45
+
+		available = {
+		}
+
+		bypass = {
+			has_war_with = RCH
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = RCH
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_rome_in_sight
+		icon = GFX_HNZ_invade_polis
+		prerequisite = { focus = EUR_rome_war_RCH focus = EUR_rome_war_RED focus = EUR_dagger_to_the_heart }
+
+		relative_position_id = EUR_dagger_to_the_heart
+		x = 0
+		y = 2
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PLS
+			}
+			set_cosmetic_tag = EUR_roman_empire
+		}
+	}
+
+	focus = {
+		id = EUR_my_rome
+		icon = GFX_EUR_my_rome
+		prerequisite = { focus = EUR_rome_in_sight }
+
+		relative_position_id = EUR_rome_in_sight
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+			NOT = { has_war_with = PLS }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			every_owned_state  = {
+                limit = {
+                    is_core_of = PLS
+                    is_owned_by = EUR
+                }
+                add_core_of = PREV
+            }
+		}
+	}
+
+	####################
+	#				   #
+	#  COMMUNISM AHHH  #
+	#				   #
+	####################
+
+	focus = {
+		id = EUR_lessons_from_the_reds
+		icon = GFX_RED_long_arm_of_the_state
+		prerequisite = { focus = EUR_gwc_rehabilitation }
+		prerequisite = { focus = EUR_the_schulz_project }
+		
+		mutually_exclusive = { focus = EUR_a_european_union }
+
+		relative_position_id = EUR_the_schulz_project
+		x = 2
+		y = 2
+		cost = 6.45
+
+		available = {
+			community > .5
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			country_event = nf_EUR.27
+		}
+	}
+
+	focus = {
+		id = EUR_sieze_the_means_of_production
+		icon = GFX_RED_generic_food
+		prerequisite = { focus = EUR_lessons_from_the_reds }
+
+		relative_position_id = EUR_lessons_from_the_reds
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = industrial_complex
+				    level = 1
+				    instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_sieze_the_means_of_armament
+		icon = GFX_RED_ak
+		prerequisite = { focus = EUR_sieze_the_means_of_production }
+
+		relative_position_id = EUR_sieze_the_means_of_production
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				    type = arms_factory
+				    level = 2
+				    instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_the_red_army
+		icon = GFX_RED_generic_revolution_2
+		prerequisite = { focus = EUR_lessons_from_the_reds }
+
+		relative_position_id = EUR_lessons_from_the_reds
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = europe_red_army
+		}
+	}
+
+	focus = {
+		id = EUR_improve_red_army
+		icon = GFX_RED_honorguard
+		prerequisite = { focus = EUR_the_red_army }
+
+		relative_position_id = EUR_the_red_army
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = europe_red_army
+				add_idea = europe_red_army_2
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_follow_in_their_footsteps
+		icon = GFX_RED_politics
+		prerequisite = { focus = EUR_lessons_from_the_reds }
+
+		relative_position_id = EUR_lessons_from_the_reds
+		x = 5
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_political_power = 25
+			add_opinion_modifier = { target = RED modifier = small_increase }
+			RED = { add_opinion_modifier = { target = EUR modifier = small_increase } }
+		}
+	}
+
+	focus = {
+		id = EUR_threats_to_the_cause
+		icon = GFX_GWC_skull
+		prerequisite = { focus = EUR_follow_in_their_footsteps }
+
+		relative_position_id = EUR_follow_in_their_footsteps
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		bypass = {
+			GWC = { exists = no }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GWC
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_people_of_europa
+		icon = GFX_GWC_core
+		prerequisite = { focus = EUR_threats_to_the_cause }
+
+		relative_position_id = EUR_threats_to_the_cause
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+			NOT = { has_war_with = GWC }
+			every_owned_state  = {
+                limit = {
+                    is_core_of = GWC
+                }
+                compliance > 80
+            }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			every_owned_state  = {
+                limit = {
+                    is_core_of = GWC
+					is_owned_by = EUR
+                }
+                add_core_of = PREV
+            }
+		}
+	}
+
+	focus = {
+		id = EUR_clear_the_infestations
+		icon = GFX_oil_lamp
+		prerequisite = { focus = EUR_follow_in_their_footsteps }
+
+		relative_position_id = EUR_follow_in_their_footsteps
+		x = 2
+		y = 1
+		cost = 6.45
+
+		available = {
+			has_manpower > 10
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_manpower = -10
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_devout_workers
+		icon = GFX_RED_factories
+		prerequisite = { focus = EUR_clear_the_infestations }
+
+		relative_position_id = EUR_clear_the_infestations
+		x = 0
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_category = pastoral
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_rearmament
+		icon = GFX_RED_frontlines
+		prerequisite = { focus = EUR_threats_to_the_cause }
+
+		relative_position_id = EUR_threats_to_the_cause
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_manpower = 75
+			add_equipment_to_stockpile = {
+				type = basic_infantry_equipment
+				amount = 75
+				producer = RUS
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_meat_for_the_grinder
+		icon = GFX_RED_chief_of_the_force
+		prerequisite = { focus = EUR_rearmament }
+		prerequisite = { focus = EUR_people_of_europa }
+
+		relative_position_id = EUR_people_of_europa
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_manpower = 100
+			add_equipment_to_stockpile = {
+				type = basic_infantry_equipment
+				amount = 100
+				producer = RUS
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_commie_war_ARB
+		icon = GFX_RED_heavy_squad_2
+		prerequisite = { focus = EUR_rearmament }
+		prerequisite = { focus = EUR_devout_workers }
+
+		relative_position_id = EUR_rearmament
+		x = 1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARB
+			}
+		}
+	}
+
+	focus = {
+		id = EUR_commie_war_HNZ
+		icon = GFX_HNZ_league_of_steel
+		prerequisite = { focus = EUR_commie_war_ARB }
+		prerequisite = { focus = EUR_meat_for_the_grinder }
+
+		relative_position_id = EUR_commie_war_ARB
+		x = -1
+		y = 1
+		cost = 6.45
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HNZ
+			}
+		}
+	}
 }
