@@ -1,0 +1,10 @@
+leader_traits = {
+    _tunnel_rat = {
+        type = land
+		trait_type = personality_trait
+
+        modifier = {
+			max_dig_in = 1
+		}
+    }
+}

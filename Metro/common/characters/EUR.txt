@@ -146,5 +146,56 @@ characters={
 		}
 	}
 
+	EUR_general_gromski = {
+		name = EUR_general_gromski
+		portraits={
+			civilian={
+				large = "gfx/leaders/generic/portrait_generic_1.dds"
+			}
+		}
+		field_marshal = {
+			traits = { _tunnel_rat }
+			skill = 6
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+
+	EUR_captain_price = {
+		name = EUR_captain_price
+		portraits={
+			civilian={
+				large = "gfx/leaders/generic/portrait_generic_2.dds"
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	EUR_general_soap = {
+		name = EUR_general_soap
+		portraits={
+			civilian={
+				large = "gfx/leaders/generic/portrait_generic_3.dds"
+			}
+		}
+		field_marshal = {
+			traits = { }
+			skill = 5
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
 	
 }

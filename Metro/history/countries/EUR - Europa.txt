@@ -27,6 +27,9 @@ set_technology = {
 
 recruit_character = EUR_french_crow
 recruit_character = EUR_immigrant_collective
+recruit_character = EUR_general_gromski
+recruit_character = EUR_captain_price
+recruit_character = EUR_general_soap
 
 set_politics = {
 	ruling_party = council
