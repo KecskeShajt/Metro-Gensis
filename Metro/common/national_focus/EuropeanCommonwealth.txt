@@ -4741,7 +4741,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = political_support_system_not_integrated_yet
+			diplomatic_relation = {
+				country = RED
+				relation = non_aggression_pact
+				active = yes
+			}
+			RED = {
+				diplomatic_relation = {
+					country = EUR
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
 		}
 	}
 
