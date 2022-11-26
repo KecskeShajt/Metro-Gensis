@@ -1118,14 +1118,9 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-<<<<<<< HEAD
 				army_attack_factor = 0.075
 				army_defence_factor = 0.05
 				army_org_factor = 0.075
-=======
-				army_attack_factor = 0.06
-				army_org_factor = 0.06
->>>>>>> origin/main
 			}
 		}
 
@@ -1141,7 +1136,6 @@ ideas = {
 				community_drift = 0.02
 			}
 		}
-<<<<<<< HEAD
 
 		## Commie
 
@@ -1245,8 +1239,6 @@ ideas = {
 		}
 
 		# good
-=======
->>>>>>> origin/main
 		
 		brit_economy_4 = {
 			picture = generic_pp_unity_bonus
